@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Образовательный портал ПензГТУ — 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%2300f0ff'>🎓</text></svg>">
+</head>
+<body>
+
+  
+  <div id="loader">
+    🎓 Загрузка ПензГТУ...
+  </div>
+
+  
+  <div class="snowflakes" id="snowflakes"></div>
+
+  
+  <div class="intro-screen" id="introScreen">
+    <video 
+      autoplay 
+      muted 
+      playsinline 
+      loop 
+      poster="image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23001f3f'/%3E%3Ctext x='150' y='150' fill='%2300f0ff' font-size='24' text-anchor='middle' dominant-baseline='middle'%3EPenzGTU%3C/text%3E%3C/svg%3E"
+      style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);"
+    >
+      <source src="https://cdn.qwenlm.ai/output/d484c549-2536-4fc2-839c-56e8fd28fb23/i2v/aee9bae2-b5e3-482c-86c6-8def8b419ee3/bc276430-d205-4548-9277-73ec28dda4f1.mp4?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiZDQ4NGM1NDktMjUzNi00ZmMyLTgzOWMtNTZlOGZkMjhmYjIzIiwicmVzb3VyY2VfaWQiOiJiYzI3NjQzMC1kMjA1LTQ1NDgtOTI3Ny03M2VjMjhkZGE0ZjEiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.N0Q84XH5W7Lv4Iy62iDWkkbwUJBnZ5JYdQ2esDhgyzE" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+    <h1 class="intro-title">Добро пожаловать в ПензГТУ</h1>
+    <p class="intro-subtitle">— Ваш надёжный проводник в 2026 году —</p>
+    <button class="btn-start" id="startButton">Продолжить →</button>
+  </div>
+
+  
+  <div class="auth-screen" id="authScreen" style="display: none;">
+    <div class="auth-container">
+      <h2 id="authTitle">Вход в систему</h2>
+      <form id="authForm">
+        <input type="text" id="loginInput" placeholder="Логин" required autocomplete="off">
+        <input type="password" id="passwordInput" placeholder="Пароль" required>
+        <button type="submit" class="btn-auth">Продолжить</button>
+        <p class="toggle-form">
+          Нет аккаунта? <a href="#" id="switchToRegister">Зарегистрироваться</a>
+        </p>
+        <p class="toggle-form" id="switchToLogin" style="display: none;">
+          Есть аккаунт? <a href="#" id="backToLogin">Войти</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  
+  <header id="header">
+    <div class="header-container">
+      <div class = "logo">
+        <img src="https://cdn.qwenlm.ai/d484c549-2536-4fc2-839c-56e8fd28fb23/380335d8-cc06-4569-99ea-19c12cd119fc_image.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiZDQ4NGM1NDktMjUzNi00ZmMyLTgzOWMtNTZlOGZkMjhmYjIzIiwicmVzb3VyY2VfaWQiOiIzODAzMzVkOC1jYzA2LTQ1NjktOTllYS0xOWMxMmNkMTE5ZmMiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.xB4-Dh4-ZG66A362rF8YgalwDB_FG-xQKQ6OypoyfcU&x-oss-process=image/resize,m_mfit,w_320,h_320" alt="Логотип ПензГТУ">
+        <h1>Образовательный портал ПензГТУ</h1>
+      </div>
+      <div class="header-right">
+        <button class="search-btn" aria-label="Поиск">🔍</button>
+        <button id="logoutBtn" class="login-btn" style="display: none;">Выйти</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container" id="mainContainer">
+    <aside class="sidebar">
+      
+      <div class="sidebar-section">
+        <h3 class="sidebar-title"><i class="icon-menu"></i> Основное меню</h3>
+        <ul class="menu-list">
+          <li><a href="#"><i class="icon-file"></i> Заявка на регистрацию нового преподавателя</a></li>
+          <li><a href="#"><i class="icon-file"></i> Заявка на регистрацию нового курса</a></li>
+          <li><a href="#"><i class="icon-news"></i> Новости сайта</a></li>
+          <li><a href="#"><i class="icon-window"></i> Единое окно ПензГТУ</a></li>
+        </ul>
+      </div>
+
+     
+      <div class="sidebar-section">
+        <h3 class="sidebar-title"><i class="icon-navigation"></i> Навигация</h3>
+        <ul class="menu-list">
+          <li><a href="#" class="active" id="homeLink"><i class="icon-home"></i> В начало</a></li>
+          <li><a href="#" id="cabinetLink"><i class="icon-user"></i> Личный кабинет</a></li>
+          <li><a href="#"><i class="icon-pages"></i> Страницы сайта</a></li>
+          <li><a href="#"><i class="icon-courses"></i> Мои курсы</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-title"><i class="icon-courses"></i> Мои курсы</h3>
+        <ul class="menu-list">
+          <li><a href="#"><i class="icon-book"></i> Английский язык БЗИ</a></li>
+          <li><a href="#"><i class="icon-book"></i> Английский язык ЗО</a></li>
+          <li><a href="#"><i class="icon-book"></i> АнглЯзык_КонтрТесты</a></li>
+          <li><a href="#"><i class="icon-book"></i> ДО_АнглийскийЯзык_Комарова</a></li>
+          <li><a href="#"><i class="icon-book"></i> КурсГрамАнгЯзка</a></li>
+          <li><a href="#"><i class="icon-book"></i> Информационные технологии</a></li>
+          <li><a href="#"><i class="icon-book"></i> Математика_Шорникова</a></li>
+          <li><a href="#"><i class="icon-book"></i> Основы российской государственности</a></li>
+          <li><a href="#"><i class="icon-book"></i> Русский язык и культура речи</a></li>
+          <li><a href="#"><i class="icon-book"></i> История России</a></li>
+          <li><a href="#"><i class="icon-book"></i> Информатика</a></li>
+          <li><a href="#"><i class="icon-book"></i> Физическая культура</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+     
+    </main>
+  </div>
+
+  <footer id="footer">
+    <p>© 2025 Пензенский государственный технологический университет</p>
+    <p><span>С Новым годом!</span> Учёба — как ёлка: чем ярче, тем радостнее!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
