@@ -11,7 +11,7 @@
 ![Авторизация](screenshots/screenshot2.png)
 
 ### Главная страница
-![Новости](screenshots/screenshot3.png)
+![Новости]([screenshots/screenshot3.png](https://cdn.qwenlm.ai/d484c549-2536-4fc2-839c-56e8fd28fb23/380335d8-cc06-4569-99ea-19c12cd119fc_image.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiZDQ4NGM1NDktMjUzNi00ZmMyLTgzOWMtNTZlOGZkMjhmYjIzIiwicmVzb3VyY2VfaWQiOiIzODAzMzVkOC1jYzA2LTQ1NjktOTllYS0xOWMxMmNkMTE5ZmMiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.xB4-Dh4-ZG66A362rF8YgalwDB_FG-xQKQ6OypoyfcU&x-oss-process=image/resize,m_mfit,w_320,h_320))
 
 ### Личный кабинет
 ![Личный кабинет](screenshots/screenshot4.png)
